@@ -1,0 +1,1 @@
+$ cat 2022-11-28-Article_list_dirty.tsv | sed "s/IMPORTANT\s*//" | cut -f5,12 -- | sed "s/issn: *//i" | grep -E "[0-9]{4}-[0-9X]{4}\s[0-9]{4}"| sort | uniq
